@@ -1,0 +1,339 @@
+.home {
+    position: relative;
+    max-width: 100%;
+    width: 192rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text__color-second {
+    color: var(--green);
+}
+
+.home__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.6rem 0 5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.home__logo {
+    transition: all 0.4s ease-in-out;
+    width: 30.4rem;
+    padding-left: 7.3rem;
+}
+
+.home__logo a svg {
+    width: 13.8rem;
+    height: 2.7rem;
+}
+
+.home__logo:hover {
+    transform: scale(1.4);
+}
+
+.home__nav {
+    margin-left: 10.2rem;
+    margin-right: auto;
+}
+
+.home__nav ul {
+    display: flex;
+    column-gap: 10rem;
+}
+
+.home__nav ul a {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--white);
+    display: inline-block
+}
+
+.home__nav ul a::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: var(--white);
+    transition: width 0.4s ease-in-out;
+}
+
+.home__nav ul a:hover::after,
+.home__nav ul a:focus::after {
+    width: 100%;
+}
+
+.home__null {
+    width: 43rem;
+}
+
+.home__icon {
+    transition: all 0.4s ease-in-out;
+    width: 22rem;
+    text-align: center;
+}
+
+.home__icon svg {
+    width: 2.7rem;
+    height: 2.7rem;
+    cursor: pointer;
+}
+
+.home__icon:hover {
+    transform: scale(1.8) rotate(45deg);
+}
+
+
+/* ------------------------------------Блок навиации слайдера---------------------------------- */
+
+.home__slider {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10.1rem;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.home__slider-null-left {
+    width: 30.4rem;
+}
+
+.home__slider-content {
+    align-self: flex-end;
+    margin-left: 10.2rem;
+    margin-right: auto;
+    padding-bottom: 7.5rem;
+    display: none;
+    text-align: end;
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+
+.home__slider-content.active {
+    display: block;
+}
+
+
+.home__slider-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 12.8rem;
+    line-height: 96%;
+    color: var(--white);
+}
+
+.home__slider-content h2 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.home__slider-wrapper {
+    width: 42.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.home__slider-item {
+    opacity: 0.5;
+    width: 25.3rem;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.home__slider-item.active {
+    opacity: 1;
+}
+
+.home__slider-nub {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--green);
+}
+
+.home__slider-decr {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+}
+
+.home__slider-bg {
+
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.home__slider-bg.active {
+    display: block;
+    opacity: 1;
+}
+
+.home__slider-null {
+    width: 22rem;
+}
+
+
+/* -------------------------------Footer блока----------------------------------- */
+
+.home__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 7.5rem 0 12rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin-top: auto;
+    min-height: 33.3rem;
+}
+
+.home__footer-nav {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 30.4rem;
+    padding-left: 7.3rem;
+}
+
+.home__footer-nav-item {
+    position: relative;
+    margin-left: 45px;
+    opacity: 0.5;
+}
+
+.home__footer-nav-item.active {
+    opacity: 1;
+}
+
+.home__footer-nav-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    background: var(--white);
+    top: 50%;
+    left: -45px;
+}
+
+.home__footer-nav-item.active::before {
+    width: 80px;
+    left: -100px;
+}
+
+.home__footer-descr {
+    max-width: 62.9rem;
+    color: var(--white);
+    margin-left: 10.2rem;
+    opacity: 0;
+    display: none;
+    transition: all 2s ease-out;
+}
+
+.home__footer-descr.active {
+    opacity: 1;
+    display: block;
+}
+
+.home__footer-descr h2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.home__footer-descr p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.home__footer-detailed-wrapper {
+    width: 43rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.home__footer-detailed {
+    border: 1px solid var(--white);
+    border-radius: 15px;
+    width: 27.8rem;
+    height: 6rem;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 2rem;
+    position: relative;
+}
+
+.home__footer-detailed svg {
+    width: 3.8rem;
+    height: 3.8rem;
+    position: absolute;
+    left: 1rem;
+    transition: left 0.5s ease-in-out;
+}
+
+.home__footer-detailed:hover svg {
+    left: calc(100% - 4.8rem);
+}
+
+.home__footer-mouse {
+    margin-bottom: 1.5rem;
+    width: 22rem;
+    text-align: center;
+    align-items: end;
+}
+
+.home__footer-mouse svg {
+    width: 1.9rem;
+    height: 2.9rem;
+}
+
+.home__line-left,
+.home__line-midle,
+.home__line-right {
+    position: absolute;
+    height: 100vh;
+    width: 1px;
+    background: var(--white);
+    opacity: 0.25;
+    top: 0;
+}
+
+.home__line-left {
+    left: 30.4rem;
+}
+
+.home__line-midle {
+    right: 65rem;
+}
+
+.home__line-right {
+    right: 22rem;
+}
