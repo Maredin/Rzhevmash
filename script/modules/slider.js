@@ -5,6 +5,7 @@ function slider() {
     const sliderTitle = document.querySelectorAll('.home__slider-content');
     const sliderDescr = document.querySelectorAll('.home__footer-descr');
 
+    // Скрыть не активные элементы
     function hide() {
         sliderLink.forEach(item => {
             item.classList.remove('active');
@@ -24,6 +25,7 @@ function slider() {
         })
     }
 
+    // Показать активный
     function show(i) {
         sliderLink[i].classList.add('active');
         sliderImg[i].classList.add('active');
@@ -41,19 +43,6 @@ function slider() {
             show(i)
         });
     })
-
-    /*     item.addEventListener('mouseenter', function () {
-            document.querySelector('.child').classList.add('hover-effect');
-        });
-    
-        document.querySelector('.parent').addEventListener('mouseleave', function () {
-            document.querySelector('.child').classList.remove('hover-effect');
-        });
-    
-     */
-
-
-
 
 
 }

@@ -1,8 +1,7 @@
 
-// Функция Попап с таймером. Если таймер false, то таймер не работает
-function popup() {
 
-    const followCursor = () => { // объявляем функцию followCursor
+function cursor() {
+
         const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
 
         window.addEventListener('mousemove', e => { // при движении курсора
@@ -18,13 +17,10 @@ function popup() {
             el.style.left = e.pageX + 'px' // задаём элементу позиционирование слева
             el.style.top = e.pageY + 'px' // задаём элементу позиционирование сверху
         })
-    }
-
-    followCursor()
 
 }
 
 
 
-export default popup;
+export default cursor;
 
